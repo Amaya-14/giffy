@@ -4,13 +4,13 @@ import useGifs from './useGifs'
 
 export default function useSingleGif({ id }) {
   const gifs = useGifs()
-  const result = gifs.find(singleGif => singleGif.id === id)
-  const [gif, setGif] = useState(result)
+  const gifFromCache = gifs.find(singleGif => singleGif.id === id)
+  const [gif, setGif] = useState(gifFromCache)
 
   useEffect(() => {
     if (!gif) {
       getSingleGif({ ID: id })
-        .then(setGif)
+        .then(gif => setGif(gif))
     }
   }, [gif, id])
 

@@ -23,7 +23,7 @@ export default function ListOfGifs({ gifs, listTerm, listTitle }) {
         {gifs.map((gif) => (
           <Gif
             key={gif.id}
-            gif={gif}
+            {...gif}
           />
         ))}
       </div>
