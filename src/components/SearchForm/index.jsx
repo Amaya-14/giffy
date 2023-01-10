@@ -8,7 +8,7 @@ export default function SearchForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    if (keyword !== '') setLocation(`/search/${keyword}/${rating}`)
+    if (keyword !== '') setLocation(`/giffy/search/${keyword}/${rating}`)
   }
 
   const handleChangeKeyword = (e) => {
