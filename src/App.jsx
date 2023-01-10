@@ -12,7 +12,7 @@ export default function App() {
       <div className='App'>
         <header className='flex flex-col justify-center items-center py-6'>
           <Link
-            to='/'
+            to='/giffy/'
             className='text-white text-6xl mb-4'>
             Giffy
           </Link>
@@ -20,15 +20,15 @@ export default function App() {
         </header>
         <main>
           <Route
-            path='/'
+            path='/giffy/'
             component={Home}
           />
           <Route
-            path='/search/:keyword/:rating?'
+            path='/giffy/search/:keyword/:rating?'
             component={SearchResults}
           />
           <Route
-            path='/gif/:id'
+            path='/giffy/gif/:id'
             component={Detail}
           />
         </main>

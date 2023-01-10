@@ -4,7 +4,7 @@ import { Link } from 'wouter'
 export default function Gif({ id, title, url }) {
   return (
     <Link
-      to={`/gif/${id}`}
+      to={`/giffy/gif/${id}`}
       className='relative w-full h-full'>
       <p className='absolute text-sm text-white'>{title}</p>
       <img
