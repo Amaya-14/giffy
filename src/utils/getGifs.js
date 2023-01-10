@@ -1,4 +1,4 @@
-const limit = 5
+const limit = 10
 
 export default async function getGifs ({ keyword = 'pandas', rating = 'g' } = {}) {
   const URL = `${import.meta.env.VITE_URL_GIFS}api_key=${import.meta.env.VITE_API_KEY}&q=${keyword}&rating=${rating}&limit=${limit}`

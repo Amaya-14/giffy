@@ -1,5 +1,5 @@
 const rating = 'g'
-const limit = 5
+const limit = 12
 
 export async function getTrendingGifs () {
   const URL = `${import.meta.env.VITE_URL_TRENDING_GIFS}api_key=${import.meta.env.VITE_API_KEY}&rating=${rating}&limit=${limit}`
