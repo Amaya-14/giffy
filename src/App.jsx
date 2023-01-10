@@ -10,8 +10,12 @@ export default function App() {
   return (
     <GifsContextProvider>
       <div className='App'>
-        <header>
-          <Link to='/'>Home</Link>
+        <header className='flex flex-col justify-center items-center py-6'>
+          <Link
+            to='/'
+            className='text-white text-6xl mb-4'>
+            Giffy
+          </Link>
           <SearchForm />
         </header>
         <main>

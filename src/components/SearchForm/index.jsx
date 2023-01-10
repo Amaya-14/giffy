@@ -20,35 +20,43 @@ export default function SearchForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-      <button>Búscar</button>
-      <input
-        type='text'
-        placeholder='Búscar Gifs'
-        onChange={handleChangeKeyword}
-      />
-      <select onChange={handleChangeRating}>
-        <option
-          value='g'
-          key='g'>
-          g
-        </option>
-        <option
-          value='pg'
-          key='pg'>
-          pg
-        </option>
-        <option
-          value='pg-13'
-          key='pg-13'>
-          pg-13
-        </option>
-        <option
-          value='r'
-          key='r'>
-          r
-        </option>
-      </select>
+    <form
+      className='flex justify-center'
+      onSubmit={handleSubmit}>
+      <div className='flex rounded-md overflow-hidden'>
+        <button className='bg-indigo-700 hover:bg-indigo-600 text-white h-full px-2'>Búscar</button>
+        <input
+          type='text'
+          placeholder='Búscar Gifs'
+          onChange={handleChangeKeyword}
+          className='pl-4 border-none w-full'
+        />
+        <select
+          onChange={handleChangeRating}
+          className='border-none pl-2 pr-[1.8rem]'>
+          <option disabled>Rating</option>
+          <option
+            value='g'
+            key='g'>
+            g
+          </option>
+          <option
+            value='pg'
+            key='pg'>
+            pg
+          </option>
+          <option
+            value='pg-13'
+            key='pg-13'>
+            pg-13
+          </option>
+          <option
+            value='r'
+            key='r'>
+            r
+          </option>
+        </select>
+      </div>
     </form>
   )
 }
