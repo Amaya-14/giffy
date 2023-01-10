@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import ListOfGifs from '../../components/ListOfGifs'
 import useTrendingGifs from '../../hooks/useTrendingGifs'
 import useTrendingTerms from '../../hooks/useTrendingTerms'
