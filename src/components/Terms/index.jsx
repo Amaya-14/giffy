@@ -9,7 +9,7 @@ export default function Terms({ terms }) {
           key={term}
           className='bg-slate-700 text-white py-1 px-2 rounded-md hover:scale-105'>
           <Link
-            to={`/giffy/search/${term}`}
+            to={`/search/${term}`}
             className=''>
             #{term}
           </Link>
