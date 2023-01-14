@@ -1,8 +1,7 @@
 import React from 'react'
 import Gif from '../Gif'
-import Terms from '../Terms'
 
-export default function ListOfGifs({ gifs, listTerm, listTitle, children }) {
+export default function ListOfGifs({ gifs, listTitle, children }) {
   listTitle = listTitle.replaceAll('%20', ' ')
   return (
     <section className='mb-10'>

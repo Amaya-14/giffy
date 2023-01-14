@@ -10,7 +10,10 @@ export default function Detail({ params }) {
 
   return (
     <div className='mb-7'>
-      <Gif {...gif} />
+      <Gif
+        {...gif}
+        link={false}
+      />
     </div>
   )
 }

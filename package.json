@@ -28,9 +28,9 @@
   },
   "eslintConfig": {
     "extends": [
-      "eslint-config-prettier",
       "react-app",
-      "standard"
+      "standard",
+      "eslint-config-prettier"
     ],
     "rules": {
       "space-before-function-paren": "off"
