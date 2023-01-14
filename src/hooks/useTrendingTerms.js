@@ -3,10 +3,15 @@ import getTrendingTerms from '../utils/getTrendingTerms'
 
 export default function useTrendingTerms() {
   const [trendingTerms, setTrendingTerms] = useState([])
+  const [isLoadingTerms, setIsLoadingTerms] = useState(false)
 
   useEffect(() => {
-    getTrendingTerms().then(setTrendingTerms)
+    setIsLoadingTerms(true)
+    getTrendingTerms().then(terms => {
+      setTrendingTerms(terms)
+      setIsLoadingTerms(false)
+    })
   }, [])
 
-  return trendingTerms
+  return { trendingTerms, isLoadingTerms }
 }

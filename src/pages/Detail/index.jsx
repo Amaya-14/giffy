@@ -1,9 +1,16 @@
 import React from 'react'
 import Gif from '../../components/Gif'
+import Spinner from '../../components/Spinner'
 import useSingleGif from '../../hooks/useSingleGif'
 
 export default function Detail({ params }) {
-  const gif = useSingleGif({ id: params.id })
+  const { gif, isloading } = useSingleGif({ id: params.id })
 
-  return <Gif {...gif} />
+  if (isloading) return <Spinner />
+
+  return (
+    <div className='mb-7'>
+      <Gif {...gif} />
+    </div>
+  )
 }

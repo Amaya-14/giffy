@@ -3,10 +3,15 @@ import getRelatedTerms from '../utils/getRelatedTerms'
 
 export default function useRelatedTerms({ keyword }) {
   const [relatedTerms, setRelatedTerms] = useState([])
+  const [isLoadingTerms, setIsLoadingTerms] = useState(false)
 
   useEffect(() => {
-    getRelatedTerms({ keyword }).then(setRelatedTerms)
+    setIsLoadingTerms(true)
+    getRelatedTerms({ keyword }).then(terms => {
+      setRelatedTerms(terms)
+      setIsLoadingTerms(false)
+    })
   }, [keyword])
 
-  return relatedTerms
+  return { relatedTerms, isLoadingTerms }
 }

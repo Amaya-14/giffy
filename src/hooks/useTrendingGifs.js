@@ -3,10 +3,15 @@ import { getTrendingGifs } from '../utils/getTrendingGifs'
 
 export default function useTrendingGifs() {
   const [trendingGifs, setTrendingGifs] = useState([])
+  const [isLoadingGifs, setIsLoadingGifs] = useState(false)
 
   useEffect(() => {
-    getTrendingGifs().then(setTrendingGifs)
+    setIsLoadingGifs(true)
+    getTrendingGifs().then(gifs => {
+      setTrendingGifs(gifs)
+      setIsLoadingGifs(false)
+    })
   }, [])
 
-  return trendingGifs
+  return { trendingGifs, isLoadingGifs }
 }
